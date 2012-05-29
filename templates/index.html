@@ -1,0 +1,160 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{{ url_for('.static', filename='style/style.css') }}" type="text/css">
+
+    <script type="text/javascript" src="{{ url_for('.static', filename='jquery-1.4.4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='simple.carousel.js') }}"></script>
+
+    <title>Patin!</title>
+
+    <script>
+        jQuery(document).ready(function() {
+            $("ul.imagenes").simplecarousel({
+                width: 652,
+                height: 370,
+                visible: 1,
+                auto: 5000,
+                pagination: true
+            });
+        });
+    </script>
+
+    <style>
+        .imagenes {
+            margin:0;
+            padding:0;
+            list-style:none;
+            height:400px;
+            overflow:hidden;
+        }
+        
+        .imagenes li {
+            text-align:left;
+            display:block;
+            width:697px;
+            height:400px;
+        }
+
+        .carousel-pagination li {
+            display:block;
+            width:10px;
+            height:10px;
+            margin-right:5px;
+            cursor:pointer;
+            float:left;
+            background:#333;
+        }
+        
+        .carousel-pagination .carousel-pagination-active {
+            background:#ff0000;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id='container'>
+
+    <div id='titulo'>
+    <img src='{{ url_for('.static', filename='logo.png') }}'>
+        <h1>Patín</h1>
+        Una herramienta para aprender y construir programando.
+        <br style='clear: both'/>
+    </div>
+
+<div id='content'>
+        
+
+<p style='text-align: center'>
+
+<ul class='imagenes'>
+
+<li>
+<a href='{{ url_for('.static', filename='fondo.png') }}'>
+<img src='{{ url_for('.static', filename='fondo.jpg') }}'>
+</li>
+
+<li> 
+<a href='{{ url_for('.static', filename='simple.png') }}'>
+<img src='{{ url_for('.static', filename='simple.jpg') }}'>
+</a>
+</li>
+
+
+<li>
+<a href='{{ url_for('.static', filename='cajas.png') }}'>
+<img src='{{ url_for('.static', filename='cajas.jpg') }}'>
+</a>
+</li>
+</ul>
+
+<br/>
+<div style='clear: both'/>
+
+<h1>¿En qué consiste?</h1>
+
+<p><strong>Patín</strong> es una herramienta para acercar la programación a los más jóvenes. La
+razón por la que hacemos esto es porque programar computadoras es fácil, y hay
+un enorme potencial por descubrir.
+
+<p><strong>Patín</strong> logra simplificar el desarrollo de programas tales como videojuegos y
+aplicaciones de escritorio, ofreciendo un entorno simple, asistido con
+documentación didáctica, fácil de leer y con muchos ejemplos.
+
+<p>El lenguaje que usamos en <strong>Patín</strong> es <a href='http://www.pyar.org.ar'>Python</a>, 
+y junto a él están las bibliotecas Qt y pilas.
+
+
+
+<h2>Libre y comunitario</h2>
+
+<p><strong>Patín</strong> es software libre, así que podés compartirlo con quien quieras, hacer
+copias, modificarlo, etc. Además está desarrollado con espíritu comunitario,
+para que todos podamos añadir mejoras y ser parte del equipo de desarrollo.
+
+
+<h2>Instalación</h2>
+
+<p>
+Para instalar <strong>Patín</strong> en un sistema
+Linux puedes <a href='https://bitbucket.org/hugoruscitti/patin'>bajar el código</a>, o bien, ejecutar este comando:
+
+<pre>
+sudo pip install patin
+</pre>
+
+<p>
+En breve esperamos tener una versión para sistemas Windows, pero nos está       
+costando un poquito... ¿nos ayudás?: <a href='http://www.examplelab.com.ar/images/mi_correo.png'>(email)</a>.
+
+<h2>Mas información</h2>
+
+<p>
+Este proyecto comenzó como un trabajo práctico presentado por uno de nosotros,
+<a href='http://www.examplelab.com.ar'>Hugo Ruscitti</a>, para cumplir con las exigencias de la materia Creatividad, de la
+carrera de Ingeniería en sistemas de la Universidad Tecnológica Nacional –UTN-
+Facultad Regional Buenos Aires - FRBA,  en Noviembre del 2011.
+
+<p>
+Te recomendamos leer el 
+<a href="{{ url_for('.static', filename='patin_anexo.pdf') }}">documento anexo</a> 
+del trabajo práctico para obtener más información.
+
+<p>
+Actualmente hemos <a href='https://bitbucket.org/hugoruscitti/patin'>liberado</a>,
+el proyecto y esperamos más colaboradores. ¿Te querés sumar? 
+<a href='http://www.examplelab.com.ar/images/mi_correo.png'>¡Avisanos!.</a>
+
+</div>
+
+    <div id='footer'>
+    <br/>
+    <small>se feliz ;)</small>
+    </div>
+
+</div>
+
+</body>
+</html>
+
